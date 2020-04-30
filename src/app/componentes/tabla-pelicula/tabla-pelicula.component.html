@@ -1,0 +1,20 @@
+<div class="container">
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Fecha Estreno</th>
+            <th>Publico</th>
+            <th>Foto</th>
+        </tr>
+        <tr *ngFor="let peli of this.input_tablaPelicula">
+            <td>{{peli.id}}</td>
+            <td>{{peli.nombre}}</td>
+            <td>{{peli.tipo}}</td>
+            <td>{{peli.fechaEstreno}}</td>
+            <td>{{peli.cantidadPublico}}</td>
+            <td><img src={{peli.fotoPelicula}}></td>
+        </tr>
+    </table>
+</div> 
