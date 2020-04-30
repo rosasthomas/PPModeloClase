@@ -16,4 +16,7 @@ export class TablaPeliculaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  detalles(peli:Pelicula){
+    this.output_tablaPelicula.emit(peli)
+  }
 }

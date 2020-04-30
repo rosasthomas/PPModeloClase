@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+div.container{
+    background-color: white;
+    width: 19vw;
+    height: 100%;
+    border-radius: 2%;
+    display: flex;
+    flex-flow: wrap;
+    margin-bottom: 10%
+}
+
+img{
+    width: 100px;
+    height: 130px;
+}
+
+div.lista{
+    width: 50%;
+}
+
+div.foto{
+    width: 50%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center
+}
+
+div.boton{
+    margin-top: 3%;
+    text-align: center;
+    width: 100%;
+    height: 6vh;
+}
+
+button{
+    align-self: center;
+    width: 40%;
+    height: 90%;
+    font-size: 110%;
+    background-color: white;
+    border: solid 1px #ddd;
+}

@@ -9,6 +9,7 @@ import { ServicioPeliculasService } from 'src/app/servicios/servicio-peliculas.s
 })
 export class PeliculaListadoComponent implements OnInit {
 
+  peliDetalle:Pelicula
   listadoPeliculas:Array<Pelicula>
 
   constructor(private servicio : ServicioPeliculasService) { }
@@ -17,4 +18,7 @@ export class PeliculaListadoComponent implements OnInit {
     this.listadoPeliculas = this.servicio.TraerPeliculas()
   }
 
+  peliParaDetalle(peli:Pelicula){
+    this.peliDetalle = peli;
+  }
 }

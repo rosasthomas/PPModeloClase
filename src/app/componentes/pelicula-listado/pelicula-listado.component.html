@@ -5,7 +5,9 @@
 </div>
 <div class="row">
     <div class="column">
-       <app-tabla-pelicula [input_tablaPelicula]="listadoPeliculas"></app-tabla-pelicula>  
+       <app-tabla-pelicula (output_tablaPelicula)="peliParaDetalle($event)" [input_tablaPelicula]="listadoPeliculas"></app-tabla-pelicula>  
     </div>
-    <div class="column"></div>
+    <div class="column">
+        <app-detalle-pelicula [input_detallesPelicula]="peliDetalle"></app-detalle-pelicula>
+    </div>
 </div>

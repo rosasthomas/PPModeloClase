@@ -1,0 +1,18 @@
+<div *ngIf="input_detallesPelicula" class="container">
+    <div class="lista">
+        <ul>
+            <li>{{input_detallesPelicula.id}}</li>
+            <li>{{input_detallesPelicula.nombre}}</li>
+            <li>{{input_detallesPelicula.tipo}}</li>
+            <li>{{input_detallesPelicula.tipo}}</li>
+            <li>{{input_detallesPelicula.fechaEstreno}}</li>
+            <li>{{input_detallesPelicula.cantidadPublico}}</li>
+        </ul>
+    </div>
+    <div class="foto">
+      <img src={{input_detallesPelicula.fotoPelicula}} alt="Imagen de pelicula" >
+    </div>
+    <div class="boton">
+        <button type="button" (click)="limpiar()">Limpiar</button>
+    </div>
+</div>
