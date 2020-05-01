@@ -21,4 +21,11 @@ export class PeliculaListadoComponent implements OnInit {
   peliParaDetalle(peli:Pelicula){
     this.peliDetalle = peli;
   }
+
+  Borrar(peli:Pelicula){
+    let index = this.listadoPeliculas.indexOf(peli)
+    this.listadoPeliculas.splice(index, 1);
+
+    this.servicio.BorrarPelicula(this.listadoPeliculas);
+  }
 }

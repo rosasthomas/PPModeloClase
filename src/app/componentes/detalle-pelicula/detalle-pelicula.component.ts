@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Pelicula } from 'src/app/clases/pelicula';
 
 @Component({
@@ -9,7 +9,7 @@ import { Pelicula } from 'src/app/clases/pelicula';
 export class DetallePeliculaComponent implements OnInit {
 
   @Input() input_detallesPelicula:Pelicula;
-
+  @Output() output_detallesPelicula:EventEmitter<any> = new EventEmitter<any>()
 
   constructor() { }
 
@@ -18,6 +18,10 @@ export class DetallePeliculaComponent implements OnInit {
 
   limpiar(){
     this.input_detallesPelicula = null;
+  }
+
+  Borrar(){
+    this.output_detallesPelicula.emit(this.input_detallesPelicula)
   }
 
 }
