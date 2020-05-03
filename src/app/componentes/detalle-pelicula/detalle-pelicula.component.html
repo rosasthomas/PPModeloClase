@@ -1,12 +1,20 @@
 <div *ngIf="input_detallesPelicula" class="container">
     <div class="lista">
+        <span class="titulos">Pelicula</span>
         <ul>
             <li>{{input_detallesPelicula.id}}</li>
             <li>{{input_detallesPelicula.nombre}}</li>
             <li>{{input_detallesPelicula.tipo}}</li>
-            <li>{{input_detallesPelicula.tipo}}</li>
             <li>{{input_detallesPelicula.fechaEstreno}}</li>
             <li>{{input_detallesPelicula.cantidadPublico}}</li>
+        </ul>
+    </div>
+    <div class="lista" *ngIf="actores_detallePelicula">
+        <span class="titulos">Actores</span>
+        <ul *ngFor="let actor of input_detallesPelicula.actores">
+            <li>{{actor.id}}</li>
+            <li>{{actor.nombre}}</li>
+            <li>{{actor.apellido}}</li>
         </ul>
     </div>
     <div class="foto">

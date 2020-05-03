@@ -10,6 +10,7 @@ export class DetallePeliculaComponent implements OnInit {
 
   @Input() input_detallesPelicula:Pelicula;
   @Output() output_detallesPelicula:EventEmitter<any> = new EventEmitter<any>()
+  @Input()  actores_detallePelicula:Boolean
 
   constructor() { }
 

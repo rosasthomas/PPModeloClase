@@ -1,1 +1,41 @@
-<p>pelicula-alta works!</p>
+<div class="navbar">
+    <div routerLink="/bienvenido">
+        <span>Home</span>
+    </div>
+    <div routerLink="/peliculas/listado">
+        <span>Peliculas</span>
+    </div>
+    <div routerLink="/actor/listado">
+        <span>Actores</span>
+    </div>
+    <div routerLink="/busqueda"> 
+        <span>Busqueda</span>
+    </div>
+</div>
+<div class="row">
+    <div class="column">
+       <app-tabla-actor (output_tablaActores)='agregarActor($event)' [input_tablaActores]="listadoActores" [boton_tablaActores]='true'></app-tabla-actor>  
+    </div>
+    <div class="column">
+        <div class="container">
+            <form>
+                <span class="alta">Alta Pelicula</span>
+                <div class="desc">
+                    <input type="text" placeholder="Nombre..." id="nombre" class="desc">
+                </div>
+                <div class="tipo">
+                    <input type="text" autocomplete="off"  placeholder="Tipo..." id="tipo" class="tipo">
+                </div>
+                <div class="fecha">
+                    <input type="text" placeholder="Fecha de Estreno..." id="fecha" class="fecha">
+                </div>
+                <div class="precio">
+                    <input type="text" autocomplete="off" placeholder="Cantidad de Publico..." id="publico" class="precio">
+                </div>
+                <div class="boton">
+                    <button type="button" (click)="agregar()" class="boton">Agregar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

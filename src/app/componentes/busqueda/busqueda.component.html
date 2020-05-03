@@ -2,10 +2,22 @@
     <div routerLink="/bienvenido">
         <span>Home</span>
     </div>
+    <div routerLink="/peliculas/listado">
+        <span>Peliculas</span>
+    </div>
+    <div routerLink="/peliculas/alta"> 
+        <span>Alta Peliculas</span>
+    </div>
+    <div routerLink="/actor/listado">
+        <span>Actores</span>
+    </div>
 </div>
 <div class="row">
     <div class="column">
-       <app-tabla-pelicula [input_tablaPelicula]="listadoPeliculas"></app-tabla-pelicula>
+       <app-tabla-pelicula (output_tablaPelicula)="peliParaDetalle($event)" [input_tablaPelicula]="listadoPeliculas"></app-tabla-pelicula>
+       <app-tabla-actor [input_tablaActores]="listadoActores" [boton_tablaActores]='false'></app-tabla-actor>
     </div>
-    <div class="column"></div>
+    <div class="column">
+        <app-detalle-pelicula (output_detallesPelicula)="Borrar($event)" [actores_detallePelicula]='true' [input_detallesPelicula]="peliDetalle"></app-detalle-pelicula>
+    </div>
 </div> 

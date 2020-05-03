@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Actor } from 'src/app/clases/actor';
+import { ServicioPeliculasService } from 'src/app/servicios/servicio-peliculas.service';
 
 @Component({
   selector: 'app-actor-listado',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActorListadoComponent implements OnInit {
 
-  constructor() { }
+  listadoActores:Array<Actor>
+
+  constructor(private servicio : ServicioPeliculasService) { }
 
   ngOnInit(): void {
+    this.listadoActores = this.servicio.TraerActores()
   }
 
 }

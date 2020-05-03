@@ -1,0 +1,21 @@
+<div class="container">
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apelido</th>
+            <th>Sexo</th>
+            <th>Fecha Nacimiento</th>
+            <th>Foto</th>
+        </tr>
+        <tr *ngFor="let peli of this.input_tablaActores">
+            <td>{{peli.id}}</td>
+            <td>{{peli.nombre}}</td>
+            <td>{{peli.apellido}}</td>
+            <td>{{peli.sexo}}</td>
+            <td>{{peli.fechaNacimiento}}</td>
+            <td><img src={{peli.foto}}></td>
+            <td *ngIf="this.boton_tablaActores"><button type="button" (click)="detalles(peli)">Detalles</button></td>
+        </tr>
+    </table>
+</div> 

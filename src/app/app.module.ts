@@ -9,10 +9,9 @@ import { PeliculaAltaComponent } from './componentes/pelicula-alta/pelicula-alta
 import { ActorAltaComponent } from './componentes/actor-alta/actor-alta.component';
 import { ActorListadoComponent } from './componentes/actor-listado/actor-listado.component';
 import { PeliculaListadoComponent } from './componentes/pelicula-listado/pelicula-listado.component';
-import { PeliculaAdminComponent } from './componentes/pelicula-admin/pelicula-admin.component';
-import { ActorAdminComponent } from './componentes/actor-admin/actor-admin.component';
 import { TablaPeliculaComponent } from './componentes/tabla-pelicula/tabla-pelicula.component';
 import { DetallePeliculaComponent } from './componentes/detalle-pelicula/detalle-pelicula.component';
+import { TablaActorComponent } from './componentes/tabla-actor/tabla-actor.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +22,9 @@ import { DetallePeliculaComponent } from './componentes/detalle-pelicula/detalle
     ActorAltaComponent,
     ActorListadoComponent,
     PeliculaListadoComponent,
-    PeliculaAdminComponent,
-    ActorAdminComponent,
     TablaPeliculaComponent,
-    DetallePeliculaComponent
+    DetallePeliculaComponent,
+    TablaActorComponent
   ],
   imports: [
     BrowserModule,
